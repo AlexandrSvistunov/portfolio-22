@@ -183,6 +183,24 @@ button {
   margin: auto;
 }
 
+/****************Skills***************/
+.skills {
+  text-align: center;
+}
+.skills__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 40px;
+}
+.skills__card-img {
+  width: auto;
+}
+.skills__card-info {
+  text-align: justify;
+}
+
 /****************Footer***************/
 /**********Thankyou***********/
 /*******Modals************/
