@@ -441,6 +441,11 @@ button {
   .header-nav__list {
     width: 100%;
   }
+
+  .header__logo {
+    width: 50px;
+    height: 40px;
+  }
 }
 /****************Animations***************/
 @-webkit-keyframes menu-left {
