@@ -1,0 +1,37 @@
+/********** Header ***********/
+.header
+
+  position: relative
+
+  &__wrapper
+    +flex-between
+    align-items: center
+
+  &__logo
+    width: 71px
+    height: 56px
+
+  &__burger
+    width: 41px
+    height: 30px
+    cursor: pointer
+    display: none
+
+  &__close
+    position: absolute
+    z-index: 99
+    width: 16px
+    height: 15px
+    top: 19px
+    right: 10px
+    visibility: hidden
+    opacity: 0
+    cursor: pointer
+    
+  &__social
+    +flex-between
+    flex-basis: 98px
+
+    &-link
+      display: flex
+      align-items: center
