@@ -12,6 +12,7 @@ let menuClose = document.querySelector(".header__close");
 let menuNav = document.querySelector(".header-nav__list");
 
 
+
  //Кликаем на бургер
   menuButton.addEventListener("click", function () {
     $(menuNav).addClass("header-nav__list--mobile");
@@ -20,9 +21,17 @@ let menuNav = document.querySelector(".header-nav__list");
 
 // Кликаем на крестик
 menuClose.addEventListener("click", function () {
-  $(menuNav).removeClass('header-nav__list--mobile');
+  $(menuNav).removeClass("header-nav__list--mobile");
   $(menuClose).removeClass("header__close--active");
 });
+
+// Плавная прокрутка
+$('a[href^="#"]').click(function () {
+  elementClick = $(this).attr('href')
+  destination = $(elementClick).offset().top;
+  $('html:not(:animated),body:not(:animated)').animate({scrollTop: destination}, 800);
+  return false;
+  });
 
 
 });

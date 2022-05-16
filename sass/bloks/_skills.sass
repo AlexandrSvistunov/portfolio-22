@@ -2,17 +2,33 @@
 .skills
   text-align: center
   &__title
+    font-weight: 700
+    font-size: 36px
+    margin-bottom: 60px
+    color: $hover-color
   &__wrapper
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-auto-rows: 1fr
-    grid-column-gap: 50px
-    grid-row-gap: 40px
+    grid-column-gap: 13vw
+    grid-row-gap: 60px
 
   &__card
+    display: flex
+    flex-direction: column
     &-icon
+      margin-bottom: 20px
     &-img
       width: auto
     &-title
+      font-weight: 700
+      font-size: 25px
+
     &-info
-      text-align: justify
+      text-align: center
+      font-weight: 400
+      font-size: 21px
+      line-height: 28px
+      margin-top: 20px
+      margin-bottom: auto
+

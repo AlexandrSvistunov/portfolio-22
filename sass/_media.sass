@@ -14,9 +14,12 @@
 
 
 @media (max-width: 1100px)
+
  
 
-@media (max-width: 1030px)
+@media (max-width: 1000px)
+  .skills__card-title
+    margin-bottom: auto
 
 
 /********** Interaktive ***********/
@@ -71,7 +74,11 @@
       &-wrapper
         border: 6px solid #FFFFFF
   
-    
+  .skills
+    &__card-info
+      font-size: 20px
+    &__wrapper
+      grid-column-gap: 2vw
 /********** Мобильное меню ***********/ 
 @media (max-width: 700px)
   .main
@@ -103,17 +110,19 @@
             padding-right: 0
 
       &__list
+        visibility: hidden
         position: absolute
-        right: -500px
-        transition: 0.5s ease
         top: 0
+        left: 0
         z-index: 10
         align-items: center
         flex-direction: column
         text-transform: uppercase
-
+        transition: 0.5s
+        animation:  menu-right  0.5s
 
         &--mobile
+          visibility: visible
           right: 0
           top: 0
           animation:  menu-left  0.5s
@@ -137,6 +146,16 @@
     &__info
       width: 100%
 
+  .skills
+    &__wrapper
+      display: block
+
+    &__card
+      margin-bottom: 50px
+
+    &__card-title
+      margin-bottom: 0
+
 @media (max-width: 660px)
 
 
@@ -149,11 +168,12 @@
 @media (max-width: 530px)
 
   .hero
+    margin-bottom: 50px
     &__info
       &-prof
         font-size: 16px
       &-name
-        font-size: 24px
+        font-size: 25px
       &-text
         font-size: 16px
 
@@ -166,8 +186,25 @@
       &-wrapper
         border: 4px solid #FFFFFF
 
+
+  .skills
+    &__title
+      font-size: 25px
+      margin-bottom: 50px
+
+    &__wrapper
+      grid-row-gap: 30px
+
+    &__card-title
+      font-size: 20px
+      margin-bottom: 0
+      
+    &__card-info
+      font-size: 16px
+      margin-top: 10px
+
+
 @media (max-width: 490px)
- 
 
 @media (max-width: 400px)
 
