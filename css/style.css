@@ -82,6 +82,13 @@ button {
   padding: 0 15px;
 }
 
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #FFBB01;
+}
+
 /********** Header ***********/
 .header {
   position: relative;
@@ -186,12 +193,7 @@ button {
 /****************Skills***************/
 .skills {
   text-align: center;
-}
-.skills__title {
-  font-weight: 700;
-  font-size: 36px;
   margin-bottom: 60px;
-  color: #FFBB01;
 }
 .skills__wrapper {
   display: grid;
@@ -223,6 +225,7 @@ button {
   margin-bottom: auto;
 }
 
+/****************Portfolio***************/
 /****************Footer***************/
 /**********Thankyou***********/
 /*******Modals************/
@@ -484,6 +487,11 @@ button {
   }
 }
 @media (max-width: 530px) {
+  .section-title {
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+
   .hero {
     margin-bottom: 50px;
   }
@@ -506,10 +514,6 @@ button {
     border: 4px solid #FFFFFF;
   }
 
-  .skills__title {
-    font-size: 25px;
-    margin-bottom: 50px;
-  }
   .skills__wrapper {
     grid-row-gap: 30px;
   }
