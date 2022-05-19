@@ -42,6 +42,10 @@
       transform: scaleX(0)
       transition: transform 0.3s
 
+    &:active
+      color: $active-color
+    
+
   .header
     &__social-link
       &:hover
@@ -50,7 +54,36 @@
     &__logo
       &:hover
         animation: rotateY 2s
-      
+
+  .portfolio
+    &__links
+      &-link
+        position: relative
+        &:hover
+          +hover
+
+        &:hover::before
+          transform: scaleX(1)
+
+        &::before
+          position: absolute
+          bottom: -1px
+          right: 0
+          content: ''
+          width: 81%
+          height: 1px
+          background-color: #ffffff
+          transform: scaleX(0)
+          transition: transform 0.3s
+
+        &:active
+          color: $active-color
+
+    &__slider
+      &-button
+        &:hover
+          color: $hover-color
+
 
   
 @media (max-width: 992px)

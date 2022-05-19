@@ -1,2 +1,77 @@
 /****************Portfolio***************/
+.portfolio
+  text-align: center
 
+  &__slider
+    position: relative
+    padding: 0 30px
+
+    &-item
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      grid-column-gap: 30px
+
+    &-button
+      top: 50%
+      transform: translateY(-50%)
+      position: absolute
+      width: 25px
+      height: 25px
+      z-index: 99
+      cursor: pointer
+      color: #FFFFFF
+
+      &--next
+        right: 0
+
+      &--prev
+        left: 0
+
+
+  &__img
+    object-fit: contain
+    max-height: 400px
+
+  &__info
+    text-align: left
+
+    &-title
+      font-weight: 700
+      font-size: 26px
+      line-height: 30px
+      margin-bottom: 10px
+  &__links
+    +flex-between
+
+    &-title
+      font-weight: 700
+      font-size: 20px
+      line-height: 23px
+    &-list
+      font-weight: 400
+      font-size: 18px
+      line-height: 21px
+      flex-basis: 238px
+    &-item
+      &:first-child
+        margin-bottom: 15px
+    &-link
+      +flex-between
+      align-items: flex-end
+      
+    &-icon
+
+  &__details
+
+    &-title
+      font-weight: 700
+      font-size: 20px
+      line-height: 23px
+      margin-bottom: 15px
+
+    &-text
+      font-weight: 400
+      font-size: 18px
+      line-height: 150%
+      text-align: justify

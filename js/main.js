@@ -33,6 +33,31 @@ $('a[href^="#"]').click(function () {
   return false;
   });
 
+// *************Слайдер****************
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    
+    loop: false,
+  
+    // Pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: ".portfolio__slider-button--next",
+      prevEl: ".portfolio__slider-button--prev",
+    },
+
+    keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
+  
+  });
+  
+
 
 });
 

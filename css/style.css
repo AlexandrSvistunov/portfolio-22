@@ -226,6 +226,85 @@ button {
 }
 
 /****************Portfolio***************/
+.portfolio {
+  text-align: center;
+}
+.portfolio__slider {
+  position: relative;
+  padding: 0 30px;
+}
+.portfolio__slider-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-column-gap: 30px;
+}
+.portfolio__slider-button {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 99;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.portfolio__slider-button--next {
+  right: 0;
+}
+.portfolio__slider-button--prev {
+  left: 0;
+}
+.portfolio__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 400px;
+}
+.portfolio__info {
+  text-align: left;
+}
+.portfolio__info-title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.portfolio__links {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio__links-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.portfolio__links-list {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  flex-basis: 238px;
+}
+.portfolio__links-item:first-child {
+  margin-bottom: 15px;
+}
+.portfolio__links-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.portfolio__details-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 15px;
+}
+.portfolio__details-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: justify;
+}
+
 /****************Footer***************/
 /**********Thankyou***********/
 /*******Modals************/
@@ -337,6 +416,12 @@ button {
   color: #BDBDBD;
 }
 
+/****************Swiper***************/
+.swiper-button-disabled {
+  opacity: 20%;
+  cursor: auto;
+}
+
 /******* Media **********/
 @media (min-width: 1600px) {
   .container {
@@ -370,6 +455,9 @@ button {
     transform: scaleX(0);
     transition: transform 0.3s;
   }
+  .header-nav__item:active {
+    color: red;
+  }
 
   .header__social-link:hover {
     color: #FFBB01;
@@ -378,6 +466,34 @@ button {
   .header__logo:hover {
     -webkit-animation: rotateY 2s;
             animation: rotateY 2s;
+  }
+
+  .portfolio__links-link {
+    position: relative;
+  }
+  .portfolio__links-link:hover {
+    color: #FFBB01;
+    transition: 0.3s;
+  }
+  .portfolio__links-link:hover::before {
+    transform: scaleX(1);
+  }
+  .portfolio__links-link::before {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    content: "";
+    width: 81%;
+    height: 1px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .portfolio__links-link:active {
+    color: red;
+  }
+  .portfolio__slider-button:hover {
+    color: #FFBB01;
   }
 }
 /********** IPad ***********/
