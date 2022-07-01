@@ -193,7 +193,7 @@ button {
 /****************Skills***************/
 .skills {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 .skills__wrapper {
   display: grid;
@@ -267,6 +267,10 @@ button {
   -o-object-fit: contain;
      object-fit: contain;
   max-height: 400px;
+}
+.portfolio__img-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
 }
 .portfolio__info {
   text-align: left;
