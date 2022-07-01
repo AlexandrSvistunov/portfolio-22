@@ -271,7 +271,7 @@ button {
 .portfolio__img-wrapper {
   border-radius: 5px;
   overflow: hidden;
-  margin-right: 1px;
+  margin: 0 1px;
 }
 .portfolio__info {
   text-align: left;
