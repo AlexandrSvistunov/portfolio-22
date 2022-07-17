@@ -68,11 +68,11 @@
                         />
                         <!-- /.header-nav -->
                     </nav>
-                    <ul class="header__social">
-                        <li class="header__social-item">
-                            <a href="#" class="header__social-link">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
                                 <svg
-                                    class="header__social-icon"
+                                    class="social__icon"
                                     width="27"
                                     height="26"
                                     role="img"
@@ -84,10 +84,10 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="header__social-item">
-                            <a href="#" class="header__social-link">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
                                 <svg
-                                    class="header__cocial-icon"
+                                    class="social__icon"
                                     width="27"
                                     height="26"
                                     role="img"
@@ -99,10 +99,10 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="header__social-item">
-                            <a href="" class="header__social-link">
+                        <li class="social__item">
+                            <a href="" class="social__link">
                                 <svg
-                                    class="header__social-icon"
+                                    class="social__icon"
                                     width="27"
                                     height="27"
                                     role="img"
@@ -115,7 +115,7 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.header__cocial -->
+                    <!-- /.cocial -->
                 </div>
                 <!-- /.header__wrapper -->
             </div>
@@ -149,9 +149,9 @@
                         <!-- /.hero__photo -->
                     </div>
                     <!-- /.hero__flex-box -->
-                    <a href="#skills" class="hero__scroll">
+                    <a href="#skills" class="scroll">
                         <img
-                            class="hero__scroll-img"
+                            class="scroll__img"
                             src="./img/arrow-down.png"
                             alt="Скролл вниз"
                         />
@@ -348,14 +348,7 @@
                                             >
                                                 Детали проекта:
                                             </h4>
-                                            <a href="#project-details" class="portfolio__scroll">
-                                                <img
-                                                    class="hero__scroll-img"
-                                                    src="./img/arrow-down.png"
-                                                    alt="Детали проекта"
-                                                />
-                                            </a>
-                                            <p class="portfolio__details-text" id="project-details">
+                                            <p class="portfolio__details-text">
                                                 Одностраничный адаптивный сайт.
                                                 Использовался препроцессор SASS.
                                                 Модальные окна на JQuery.
@@ -813,7 +806,78 @@
         <footer class="footer">
             <div class="container">
                 <h2 class="section-title" id="footer">Свяжитесь со мной</h2>
-                
+                <div class="footer__feedback">
+                    <form action="#" class="footer__form">
+                        <p class="footer__form-legend">Если вы ищете специалиста по верстке сайтов в команду или для работы над проектом — напишите мне</p>
+                        <div class="footer__form-input"><input class="footer__form-email" type="email" name="email" id="email" placeholder="Ваш Email"></div>
+                        <div class="footer__form-input"><input class="footer__form-tel" type="tel" name="tel" id="tel" placeholder="Ваш телефон" required></div>
+                        <textarea class="footer__form-text" name="text" id="text" placeholder="Ваше сообщение"></textarea>
+                        <input class="footer__form-submit" type="submit" value="отправить">
+                    </form>
+                    <!-- /.footer__form -->
+                    <div class="footer__contacts">
+                        <p class="footer__contacts-tel">
+                            <span>Телефон:</span>
+                            <a href="tel:+79521400053">+7 952 140 00 53</a>
+                        </p>
+                        <p class="footer__contacts-mail">
+                            <span>Почта:</span>
+                            <a href="mailto:alsvis2013@yandex.ru">alsvis2013@yandex.ru</a>
+                        </p>
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg
+                                        class="social__icon"
+                                        width="27"
+                                        height="26"
+                                        role="img"
+                                        aria-label="Гитхаб"
+                                    >
+                                        <use
+                                            xlink:href="img/svg/sprite.svg#github"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg
+                                        class="social__icon"
+                                        width="27"
+                                        height="26"
+                                        role="img"
+                                        aria-label="В контакте"
+                                    >
+                                        <use
+                                            xlink:href="img/svg/sprite.svg#vk"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="" class="social__link">
+                                    <svg
+                                        class="social__icon"
+                                        width="27"
+                                        height="27"
+                                        role="img"
+                                        aria-label="Телеграм"
+                                    >
+                                        <use
+                                            xlink:href="img/svg/sprite.svg#telegram"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.cocial -->
+                        <div class="footer__img-wrapper"><img src="img/hero-img.jpg" alt="Моё фото" class="footer__img"></div>
+                    </div>
+                    <!-- /.footer__contacts -->
+                </div>
+                <!-- /.footer__feedback -->
+                <p class="footer__copyright"> © 2022  Александр Свистунов  </p>
             </div>
             <!-- /.footer-container -->
         </footer>

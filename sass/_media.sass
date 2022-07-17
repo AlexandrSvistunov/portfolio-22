@@ -17,9 +17,6 @@
 
   .portfolio
 
-    &__scroll
-      display: block
-    
     &__slider-item
       grid-template-columns: 1fr
       grid-row-gap: 40px
@@ -39,7 +36,6 @@
       margin-bottom: 15px
 
     &__details-title
-      margin-bottom: 0
       text-align: center
 
 
@@ -74,13 +70,14 @@
     
 
   .header
-    &__social-link
-      &:hover
-        +hover
-
     &__logo
       &:hover
         animation: rotateY 2s
+
+  .social
+    &__link
+      &:hover
+        +hover
 
   .portfolio
     &__links
