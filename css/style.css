@@ -822,6 +822,13 @@ button {
     right: 1%;
   }
 }
+@media (max-width: 1080px) and (orientation: landscape) {
+  .portfolio__img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-height: 320px;
+  }
+}
 /********** Мобильное меню ***********/ 
 @media (max-width: 700px) {
   .main {
