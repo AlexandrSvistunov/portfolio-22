@@ -59,6 +59,46 @@ $('a[href^="#"]').click(function () {
   
 
 
+  // *************Валидация форм*************
+
+    // Валидация модального окна-формы
+    $('.validate-form').each(function() {
+      $(this).validate({
+
+          errorClass: "invalid",
+
+          messages: {
+            
+              phone: {
+                  required: "Напишите Ваш номер телефона",
+              },
+              email: {
+                  required: "Напишите свою почту",
+                  email: "Ваш почтовый адрес должен быть в формате: name@domain.com"
+              }
+          }
+      })
+
+  });
+
+
+  // *************Валидация телефона*************
+  $(".mask-phone").inputmask("+7(999)999-9999");
+
+  // добавляем правило для валидации телефона
+  $.validator.addMethod("checkMaskPhone", function(value, element) {
+      return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+  }, "Ваш номер должен содержать 10 цифр");
+
+
+  // Вешаем валидацию на поле с телефоном по классу
+  $.validator.addClassRules({
+      'mask-phone': {
+          checkMaskPhone: true,
+      }
+  });
+
+
 });
 
 

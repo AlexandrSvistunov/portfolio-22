@@ -64,9 +64,14 @@ img {
   vertical-align: top;
 }
 
-input {
+input, textarea {
   display: block;
   border: none;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
 }
 
 button {
@@ -88,6 +93,13 @@ button {
   margin-bottom: 60px;
   color: #FFBB01;
   text-align: center;
+}
+
+.link-to-top {
+  position: fixed;
+  top: 90%;
+  right: 2.5%;
+  z-index: 99;
 }
 
 /********** Header ***********/
@@ -137,6 +149,12 @@ button {
   display: flex;
   justify-content: space-between;
   flex-basis: 98px;
+}
+.social__item--footer {
+  margin-right: 15px;
+}
+.social__item--footer:last-child {
+  margin-right: 0;
 }
 .social__link {
   display: flex;
@@ -333,8 +351,108 @@ button {
 }
 
 /****************Footer***************/
-/**********Thankyou***********/
-/*******Modals************/
+.footer__feedback {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.footer__contacts-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.footer__contacts-info span {
+  margin-right: 30px;
+}
+.footer__img-wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.footer__copyright {
+  text-align: center;
+  font-size: 17px;
+}
+.footer .social {
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/****************Form***************/
+.form {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 60px 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+  max-width: 540px;
+  box-shadow: -5px 5px 0px #FFC41D;
+}
+.form__legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+}
+.form__input {
+  background-color: #FEF3F3;
+  box-shadow: inset 0px 3px 10px rgba(199, 199, 199, 0.25);
+  padding: 15px;
+  padding-right: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.form__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #949494;
+}
+.form__input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #949494;
+}
+.form__input-img {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  max-height: 18px;
+  max-width: 20px;
+}
+.form__input-box {
+  position: relative;
+  margin-top: 15px;
+}
+.form__input-text {
+  min-height: 180px;
+  padding-right: 15px;
+}
+.form__submit {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #2E2E30;
+  padding: 18px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px #B68500;
+  background: linear-gradient(180deg, #FDDE76 0%, #FFBB01 100%);
+  cursor: pointer;
+}
+.form__submit:active {
+  background: linear-gradient(180deg, #D8B338 0%, #FAB908 100%);
+  box-shadow: 0px 4px 0px #FFFFFF;
+}
+.form__warning {
+  font-size: 14px;
+  color: #949494;
+}
+
+.invalid {
+  font-size: 14px;
+  color: #FFBB01;
+}
+
+/**********Thankyou***********/ /*******Modals************/
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -568,17 +686,14 @@ button {
   .header-nav__item:active {
     color: red;
   }
-
   .header__logo:hover {
     -webkit-animation: rotateY 2s;
             animation: rotateY 2s;
   }
-
   .social__link:hover {
     color: #FFBB01;
     transition: 0.3s;
   }
-
   .portfolio__links-link {
     position: relative;
   }
@@ -606,7 +721,6 @@ button {
   .portfolio__slider-button:hover {
     color: #FFBB01;
   }
-
   .study__item-image-wrapper {
     transition: 0.3s;
     cursor: zoom-in;
@@ -614,10 +728,34 @@ button {
   .study__item-image-wrapper:hover {
     transform: scale(2.5);
   }
+  .footer__contacts-link {
+    position: relative;
+  }
+  .footer__contacts-link:hover {
+    color: #FFBB01;
+    transition: 0.3s;
+  }
+  .footer__contacts-link::before {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #FFBB01;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .footer__contacts-link:hover::before {
+    transform: scaleX(1);
+  }
 }
 @media (max-width: 992px) {
   .portfolio__slider-item {
     padding: 30px 5%;
+  }
+  .form {
+    padding: 15px 30px 15px;
   }
 }
 /********** IPad ***********/
@@ -639,12 +777,30 @@ button {
   .hero__photo-wrapper {
     border: 6px solid #FFFFFF;
   }
-
   .skills__card-info {
     font-size: 20px;
   }
   .skills__wrapper {
     grid-column-gap: 2vw;
+  }
+  .footer__feedback {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .footer__contacts {
+    margin: 0 auto;
+  }
+  .footer__img {
+    display: none;
+  }
+  .form {
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+  .link-to-top {
+    height: 28px;
+    right: 1%;
   }
 }
 /********** Мобильное меню ***********/ 
@@ -652,7 +808,6 @@ button {
   .main {
     padding-top: 40px;
   }
-
   .header-nav {
     order: 1;
     flex-basis: auto;
@@ -705,7 +860,6 @@ button {
   .header__burger {
     display: block;
   }
-
   .hero__flex-box {
     flex-direction: column;
   }
@@ -715,7 +869,6 @@ button {
   .hero__info {
     width: 100%;
   }
-
   .skills__wrapper {
     display: block;
   }
@@ -725,11 +878,9 @@ button {
   .skills__card-title {
     margin-bottom: 0;
   }
-
   .portfolio {
     margin-bottom: 30px;
   }
-
   .study__box {
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
@@ -759,9 +910,8 @@ button {
 @media (max-width: 530px) {
   .section-title {
     font-size: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
-
   .hero {
     margin-bottom: 50px;
   }
@@ -783,7 +933,6 @@ button {
   .hero__photo-wrapper {
     border: 4px solid #FFFFFF;
   }
-
   .skills__wrapper {
     grid-row-gap: 30px;
   }
@@ -795,7 +944,6 @@ button {
     font-size: 16px;
     margin-top: 10px;
   }
-
   .portfolio__scroll {
     display: none;
   }
@@ -807,12 +955,10 @@ button {
   .header-nav__list {
     width: 100%;
   }
-
   .header__logo {
     width: 50px;
     height: 40px;
   }
-
   .portfolio__info-title {
     font-size: 20px;
   }
@@ -830,9 +976,18 @@ button {
   .portfolio__details-text {
     font-size: 16px;
   }
-
   .swiper-pagination-bullets.portfolio__slider-pagination {
     bottom: 790px;
+  }
+  .footer__contacts-info {
+    margin-bottom: 30px;
+  }
+  .form {
+    padding: 15px 20px 15px;
+    margin-bottom: 30px;
+  }
+  .form__input-text {
+    min-height: 150px;
   }
 }
 /****************Animations***************/

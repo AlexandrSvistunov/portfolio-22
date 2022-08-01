@@ -1,0 +1,66 @@
+/****************Form***************/
+.form
+  background-color: #ffffff
+  color: #000000
+  padding: 15px 60px 15px
+  margin-right: 20px
+  border-radius: 5px
+  max-width: 540px
+  box-shadow: -5px 5px 0px #FFC41D
+  &__legend
+    font-weight: 700
+    font-size: 18px
+    line-height: 28px
+    text-align: center
+  &__input
+    background-color: #FEF3F3
+    box-shadow: inset 0px 3px 10px rgba(199, 199, 199, 0.25)
+    padding: 15px
+    padding-right: 40px
+    border-radius: 5px
+    font-size: 15px
+    &::-moz-placeholder
+      font-weight: 400
+      font-size: 14px
+      color: #949494
+    &::-webkit-input-placeholder
+      font-weight: 400
+      font-size: 14px
+      color: #949494
+    &-img
+      position: absolute
+      top: 14px
+      right: 15px
+      max-height: 18px
+      max-width: 20px
+    &-box
+      position: relative
+      margin-top: 15px
+    &-email
+    &-tel
+    &-text
+      min-height: 180px
+      padding-right: 15px
+
+  &__submit
+    margin-top: 15px
+    font-weight: 700
+    font-size: 12px
+    color: #2E2E30
+    padding: 18px
+    margin-bottom: 10px
+    border-radius: 5px
+    box-shadow: 0px 4px 0px #B68500
+    background: linear-gradient(180deg, #FDDE76 0%, #FFBB01 100%)
+    cursor: pointer
+    &:active
+      background: linear-gradient(180deg, #D8B338 0%, #FAB908 100%)
+      box-shadow: 0px 4px 0px #FFFFFF
+
+  &__warning
+    font-size: 14px
+    color: #949494
+
+.invalid
+  font-size: 14px
+  color: #FFBB01
