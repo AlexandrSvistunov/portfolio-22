@@ -192,6 +192,10 @@ button {
   color: #FFBB01;
   margin-bottom: 15px;
 }
+.hero__info-prof--thankyou {
+  font-weight: 700;
+  font-size: 72px;
+}
 .hero__info-name {
   font-weight: 700;
   font-size: 64px;
@@ -204,6 +208,10 @@ button {
   line-height: 28px;
   max-width: 503px;
 }
+.hero__info-text--thankyou {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
 .hero__photo {
   max-height: 392px;
 }
@@ -211,6 +219,13 @@ button {
   border: 10px solid #FFFFFF;
   border-radius: 50%;
   overflow: hidden;
+}
+.hero__thankyou-button {
+  text-transform: uppercase;
+  border: 3px solid #FFFFFF;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /****************Skills***************/
@@ -694,6 +709,10 @@ button {
     color: #FFBB01;
     transition: 0.3s;
   }
+  .hero__thankyou-button:hover {
+    color: #FFBB01;
+    transition: 0.3s;
+  }
   .portfolio__links-link {
     position: relative;
   }
@@ -918,11 +937,17 @@ button {
   .hero__info-prof {
     font-size: 16px;
   }
+  .hero__info-prof--thankyou {
+    font-size: 46px;
+  }
   .hero__info-name {
     font-size: 25px;
   }
   .hero__info-text {
     font-size: 16px;
+  }
+  .hero__info-text--thankyou {
+    font-size: 22px;
   }
   .hero__flex-box {
     margin-bottom: 20px;
