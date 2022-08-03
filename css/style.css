@@ -222,7 +222,7 @@ button {
 }
 .hero__thankyou-button {
   text-transform: uppercase;
-  border: 3px solid #FFFFFF;
+  border: 3px solid #FFBB01;
   display: inline-block;
   border-radius: 5px;
   padding: 10px;
@@ -712,6 +712,7 @@ button {
   .hero__thankyou-button:hover {
     color: #FFBB01;
     transition: 0.3s;
+    border-color: #FFFFFF;
   }
   .portfolio__links-link {
     position: relative;
@@ -819,6 +820,7 @@ button {
   }
   .link-to-top {
     height: 28px;
+    width: 28px;
     right: 1%;
   }
 }
